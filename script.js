@@ -1,13 +1,36 @@
+// Variável para controlar o formato do relógio (true = 24h, false = 12h)
+let formato24h = true;
+
 // Função para atualizar o relógio digital
 function atualizarRelogio() {
   const agora = new Date();
-  const horas = agora.getHours().toString().padStart(2, '0');
+  let horas = agora.getHours();
   const minutos = agora.getMinutes().toString().padStart(2, '0');
   const segundos = agora.getSeconds().toString().padStart(2, '0');
+  
+  let periodo = '';
+  
+  if (!formato24h) {
+    // Formato 12h
+    periodo = horas >= 12 ? ' PM' : ' AM';
+    horas = horas % 12;
+    horas = horas ? horas : 12; // Se for 0, mostrar 12
+  }
+  
+  const horasFormatadas = horas.toString().padStart(2, '0');
 
-  document.getElementById('horas').textContent = horas;
+  document.getElementById('horas').textContent = horasFormatadas;
   document.getElementById('minutos').textContent = minutos;
   document.getElementById('segundos').textContent = segundos;
+  document.getElementById('periodo').textContent = periodo;
+}
+
+// Função para alternar entre formato 24h e 12h
+function toggleFormato() {
+  formato24h = !formato24h;
+  const formatoTexto = formato24h ? '24h' : '12h';
+  document.getElementById('formatoAtual').textContent = formatoTexto;
+  atualizarRelogio();
 }
 
 // Função para alternar FAQ
@@ -54,4 +77,7 @@ function toggleFAQ(faqNumber) {
 document.addEventListener('DOMContentLoaded', function () {
   atualizarRelogio();
   setInterval(atualizarRelogio, 1000);
+  
+  // Adicionar evento ao botão de toggle
+  document.getElementById('toggleFormato').addEventListener('click', toggleFormato);
 });
