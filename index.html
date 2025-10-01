@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Relógio Digital</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="container">
         <h1>Relógio Digital</h1>
@@ -17,6 +19,46 @@
             <span id="segundos">00</span>
         </div>
     </div>
+
+    <footer class="faq-footer">
+        <div class="faq-container">
+            <h3>Perguntas Frequentes</h3>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(1)">
+                    Como funciona este relógio digital?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer" id="faq-1">
+                    <p>Este é um relógio digital interativo que mostra a hora atual em tempo real, com animações suaves
+                        e design moderno.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(2)">
+                    O relógio funciona offline?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer" id="faq-2">
+                    <p>Sim, o relógio funciona completamente offline. Ele usa JavaScript para obter a hora do seu
+                        dispositivo.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(3)">
+                    Posso personalizar o design?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer" id="faq-3">
+                    <p>Atualmente o design é fixo, mas futuras versões podem incluir opções de personalização.</p>
+                </div>
+            </div>
+            <div class="contact-section">
+                <p>Dúvidas? Entre em contato:</p>
+                <a href="mailto:contato@relogiodigital.com" class="contact-link">contato@relogiodigital.com</a>
+            </div>
+        </div>
+    </footer>
     <script src="script.js"></script>
 </body>
+
 </html>
