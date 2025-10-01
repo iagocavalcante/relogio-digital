@@ -1,6 +1,10 @@
 // Variável para controlar o formato do relógio (true = 24h, false = 12h)
 let formato24h = true;
 
+// Variável para controlar o tema atual
+let temaAtual = 0;
+const temas = ['tema-padrao', 'tema-neon', 'tema-ocean', 'tema-sunset'];
+
 // Função para atualizar o relógio digital
 function atualizarRelogio() {
   const agora = new Date();
@@ -31,6 +35,23 @@ function toggleFormato() {
   const formatoTexto = formato24h ? '24h' : '12h';
   document.getElementById('formatoAtual').textContent = formatoTexto;
   atualizarRelogio();
+}
+
+// Função para alternar entre temas
+function toggleTema() {
+  // Remover tema atual
+  document.body.classList.remove(temas[temaAtual]);
+
+  // Avançar para o próximo tema
+  temaAtual = (temaAtual + 1) % temas.length;
+
+  // Aplicar novo tema (se não for o tema padrão)
+  if (temas[temaAtual] !== 'tema-padrao') {
+    document.body.classList.add(temas[temaAtual]);
+  }
+
+  // Salvar preferência no localStorage
+  localStorage.setItem('temaRelogio', temas[temaAtual]);
 }
 
 // Função para alternar FAQ
@@ -75,9 +96,21 @@ function toggleFAQ(faqNumber) {
 
 // Inicializar o relógio e atualizar a cada segundo
 document.addEventListener('DOMContentLoaded', function () {
+  // Carregar tema salvo
+  const temaSalvo = localStorage.getItem('temaRelogio');
+  if (temaSalvo) {
+    temaAtual = temas.indexOf(temaSalvo);
+    if (temaAtual > 0) {
+      document.body.classList.add(temas[temaAtual]);
+    }
+  }
+
   atualizarRelogio();
   setInterval(atualizarRelogio, 1000);
-  
-  // Adicionar evento ao botão de toggle
+
+  // Adicionar evento ao botão de toggle de formato
   document.getElementById('toggleFormato').addEventListener('click', toggleFormato);
+
+  // Adicionar evento ao botão de toggle de tema
+  document.getElementById('toggleTema').addEventListener('click', toggleTema);
 });
