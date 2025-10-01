@@ -12,6 +12,20 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    transition: background 0.5s ease;
+}
+
+/* Tema Neon/Dark */
+body.tema-neon {
+    background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+}
+
+body.tema-ocean {
+    background: linear-gradient(135deg, #134e5e 0%, #71b280 100%);
+}
+
+body.tema-sunset {
+    background: linear-gradient(135deg, #ff6b6b 0%, #feca57 50%, #ee5a6f 100%);
 }
 
 .container {
@@ -39,6 +53,29 @@ h1 {
     font-size: 5rem;
     font-weight: bold;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+body.tema-neon .relogio span {
+    color: #00ff88;
+    text-shadow:
+        0 0 5px #00ff88,
+        0 0 10px #00ff88,
+        2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+body.tema-ocean .relogio span {
+    color: #4ecdc4;
+    text-shadow:
+        0 0 5px #4ecdc4,
+        2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+body.tema-sunset .relogio span {
+    color: #ffd93d;
+    text-shadow:
+        0 0 5px #ffd93d,
+        2px 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 .periodo {
@@ -91,6 +128,55 @@ h1 {
     font-weight: bold;
     color: #4fc3f7;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Botão de Toggle de Tema */
+.btn-tema {
+    margin-top: 1rem;
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-tema:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn-tema:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+body.tema-neon .btn-tema {
+    background: rgba(0, 255, 136, 0.2);
+    border-color: #00ff88;
+    box-shadow: 0 0 15px rgba(0, 255, 136, 0.3);
+}
+
+body.tema-neon .btn-tema:hover {
+    background: rgba(0, 255, 136, 0.3);
+    box-shadow: 0 0 25px rgba(0, 255, 136, 0.5);
+}
+
+body.tema-ocean .btn-tema {
+    background: rgba(78, 205, 196, 0.2);
+    border-color: #4ecdc4;
+}
+
+body.tema-sunset .btn-tema {
+    background: rgba(255, 217, 61, 0.2);
+    border-color: #ffd93d;
 }
 
 /* FAQ Footer Styles */
