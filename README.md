@@ -46,6 +46,7 @@ Este repositório foi criado para ajudar iniciantes a aprenderem desenvolvimento
 - HTML5
 - CSS3
 - JavaScript (Vanilla)
+- Docker
 
 ## 📋 Pré-requisitos
 
@@ -64,6 +65,20 @@ Apenas um navegador web moderno (Chrome, Firefox, Safari, Edge)
 - [MDN Web Docs](https://developer.mozilla.org/) - Documentação completa sobre HTML, CSS e JS
 - [JavaScript.info](https://javascript.info/) - Tutorial moderno de JavaScript
 - [CSS Tricks](https://css-tricks.com/) - Dicas e truques de CSS
+
+## 🛠️ Execução via Docker
+
+```
+# Construir e subir o container
+docker-compose up --build -d
+
+# Ver logs (opcional)
+docker-compose logs -f
+
+# Acessar no navegador
+http://localhost:8080
+
+```
 
 ## 📄 Licença
 
