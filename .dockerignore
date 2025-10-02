@@ -1,0 +1,8 @@
+# Ignorar arquivos que não precisam ir para a imagem
+.git
+.gitignore
+Dockerfile
+docker-compose.yml
+README.md
+node_modules
+*.log
