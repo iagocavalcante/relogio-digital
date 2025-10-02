@@ -1,313 +1,308 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    transition: background 0.5s ease;
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  transition: background 0.5s ease;
+  padding: 40px 0;
 }
 
 /* Tema Neon/Dark */
 body.tema-neon {
-    background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+  background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
 }
 
 body.tema-ocean {
-    background: linear-gradient(135deg, #134e5e 0%, #71b280 100%);
+  background: linear-gradient(135deg, #134e5e 0%, #71b280 100%);
 }
 
 body.tema-sunset {
-    background: linear-gradient(135deg, #ff6b6b 0%, #feca57 50%, #ee5a6f 100%);
+  background: linear-gradient(135deg, #ff6b6b 0%, #feca57 50%, #ee5a6f 100%);
 }
 
 .container {
-    text-align: center;
+  text-align: center;
 }
 
 h1 {
-    color: white;
-    font-size: 3rem;
-    margin-bottom: 2rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .relogio {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    padding: 3rem 5rem;
-    border-radius: 20px;
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 3rem 5rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .relogio span {
-    color: white;
-    font-size: 5rem;
-    font-weight: bold;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
+  color: white;
+  font-size: 5rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
 }
 
 body.tema-neon .relogio span {
-    color: #00ff88;
-    text-shadow:
-        0 0 5px #00ff88,
-        0 0 10px #00ff88,
-        2px 2px 8px rgba(0, 0, 0, 0.3);
+  color: #00ff88;
+  text-shadow: 0 0 5px #00ff88, 0 0 10px #00ff88, 2px 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 body.tema-ocean .relogio span {
-    color: #4ecdc4;
-    text-shadow:
-        0 0 5px #4ecdc4,
-        2px 2px 8px rgba(0, 0, 0, 0.5);
+  color: #4ecdc4;
+  text-shadow: 0 0 5px #4ecdc4, 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 body.tema-sunset .relogio span {
-    color: #ffd93d;
-    text-shadow:
-        0 0 5px #ffd93d,
-        2px 2px 8px rgba(0, 0, 0, 0.5);
+  color: #ffd93d;
+  text-shadow: 0 0 5px #ffd93d, 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 .periodo {
-    font-size: 2.5rem !important;
-    margin-left: 0.5rem;
+  font-size: 2.5rem !important;
+  margin-left: 0.5rem;
 }
 
 .separador {
-    animation: piscar 1s infinite;
+  animation: piscar 1s infinite;
 }
 
 @keyframes piscar {
-    0%, 100% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0.3;
-    }
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
 }
 
 /* Botão de Toggle de Formato */
 .btn-formato {
-    margin-top: 2rem;
-    padding: 0.8rem 2rem;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: white;
-    background: rgba(255, 255, 255, 0.2);
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  margin-top: 2rem;
+  padding: 0.8rem 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .btn-formato:hover {
-    background: rgba(255, 255, 255, 0.3);
-    border-color: rgba(255, 255, 255, 0.5);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
 .btn-formato:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 #formatoAtual {
-    font-weight: bold;
-    color: #4fc3f7;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  color: #4fc3f7;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 /* Botão de Toggle de Tema */
 .btn-tema {
-    margin-top: 1rem;
-    padding: 0.8rem 2rem;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: white;
-    background: rgba(255, 255, 255, 0.2);
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  margin-top: 1rem;
+  padding: 0.8rem 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .btn-tema:hover {
-    background: rgba(255, 255, 255, 0.3);
-    border-color: rgba(255, 255, 255, 0.5);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
 .btn-tema:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 body.tema-neon .btn-tema {
-    background: rgba(0, 255, 136, 0.2);
-    border-color: #00ff88;
-    box-shadow: 0 0 15px rgba(0, 255, 136, 0.3);
+  background: rgba(0, 255, 136, 0.2);
+  border-color: #00ff88;
+  box-shadow: 0 0 15px rgba(0, 255, 136, 0.3);
 }
 
 body.tema-neon .btn-tema:hover {
-    background: rgba(0, 255, 136, 0.3);
-    box-shadow: 0 0 25px rgba(0, 255, 136, 0.5);
+  background: rgba(0, 255, 136, 0.3);
+  box-shadow: 0 0 25px rgba(0, 255, 136, 0.5);
 }
 
 body.tema-ocean .btn-tema {
-    background: rgba(78, 205, 196, 0.2);
-    border-color: #4ecdc4;
+  background: rgba(78, 205, 196, 0.2);
+  border-color: #4ecdc4;
 }
 
 body.tema-sunset .btn-tema {
-    background: rgba(255, 217, 61, 0.2);
-    border-color: #ffd93d;
+  background: rgba(255, 217, 61, 0.2);
+  border-color: #ffd93d;
 }
 
 /* FAQ Footer Styles */
 .faq-footer {
-    width: 100%;
-    max-width: 800px;
-    margin-top: 3rem;
-    padding: 0 1rem;
+  width: 100%;
+  max-width: 800px;
+  margin-top: 3rem;
+  padding: 0 1rem;
 }
 
 .faq-container {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
-    padding: 2rem;
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .faq-container h3 {
-    color: white;
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
-    text-align: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .faq-item {
-    margin-bottom: 1rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .faq-item:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .faq-question {
-    width: 100%;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1.1rem;
-    padding: 1rem 0;
-    text-align: left;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: all 0.3s ease;
+  width: 100%;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+  padding: 1rem 0;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
 }
 
 .faq-question:hover {
-    color: #f0f0f0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  color: #f0f0f0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .faq-icon {
-    font-size: 1.5rem;
-    font-weight: bold;
-    transition: transform 0.3s ease;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: transform 0.3s ease;
 }
 
 .faq-question.active .faq-icon {
-    transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .faq-answer {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 10px;
-    margin-bottom: 0.5rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
 }
 
 .faq-answer.active {
-    max-height: 200px;
-    padding: 1rem;
+  max-height: 200px;
+  padding: 1rem;
 }
 
 .faq-answer p {
-    color: rgba(255, 255, 255, 0.9);
-    line-height: 1.6;
-    margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  margin: 0;
 }
 
 .contact-section {
-    margin-top: 2rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    text-align: center;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
 }
 
 .contact-section p {
-    color: white;
-    margin-bottom: 0.5rem;
-    font-size: 1.1rem;
+  color: white;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
 }
 
 .contact-link {
-    color: #4fc3f7;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1rem;
-    transition: all 0.3s ease;
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    border-radius: 10px;
-    background: rgba(79, 195, 247, 0.1);
-    border: 1px solid rgba(79, 195, 247, 0.3);
+  color: #4fc3f7;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  background: rgba(79, 195, 247, 0.1);
+  border: 1px solid rgba(79, 195, 247, 0.3);
 }
 
 .contact-link:hover {
-    background: rgba(79, 195, 247, 0.2);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(79, 195, 247, 0.3);
+  background: rgba(79, 195, 247, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(79, 195, 247, 0.3);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .faq-container {
-        padding: 1.5rem;
-        margin: 0 0.5rem;
-    }
-    
-    .faq-question {
-        font-size: 1rem;
-    }
-    
-    .contact-link {
-        font-size: 1rem;
-        padding: 0.4rem 0.8rem;
-    }
+  .faq-container {
+    padding: 1.5rem;
+    margin: 0 0.5rem;
+  }
+
+  .faq-question {
+    font-size: 1rem;
+  }
+
+  .contact-link {
+    font-size: 1rem;
+    padding: 0.4rem 0.8rem;
+  }
 }
