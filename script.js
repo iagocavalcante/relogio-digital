@@ -116,3 +116,17 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+function displayCurrentDate() {
+    const currentDateElement = document.getElementById('actual-date');
+    const todayDate = new Date();
+    const dateFormatOptions = {
+        day: 'numeric',
+        month: 'long',
+        year: 'numeric'
+    };
+    const formattedDate = new Intl.DateTimeFormat('pt-BR', dateFormatOptions).format(todayDate);
+    currentDateElement.textContent = formattedDate;
+}
+
+ displayCurrentDate();
+
