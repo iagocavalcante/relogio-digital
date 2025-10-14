@@ -167,7 +167,7 @@ h1 {
 }
 
 /* Botão de Toggle de Formato */
-.btn-formato {
+.btn-formato, .btn-tema {
     margin-top: 2rem;
     padding: 1rem 2.5rem;
     font-size: 1.2rem;
@@ -185,7 +185,7 @@ h1 {
     overflow: hidden;
 }
 
-.btn-formato::before {
+.btn-formato::before, .btn-tema::before {
     content: '';
     position: absolute;
     top: 50%;
@@ -198,12 +198,12 @@ h1 {
     transition: width 0.6s, height 0.6s;
 }
 
-.btn-formato:hover::before {
+.btn-formato:hover::before, .btn-tema:hover::before {
     width: 300px;
     height: 300px;
 }
 
-.btn-formato:hover {
+.btn-formato:hover, .btn-tema:hover {
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.25));
     border-color: rgba(255, 255, 255, 0.6);
     transform: translateY(-3px) scale(1.05);
