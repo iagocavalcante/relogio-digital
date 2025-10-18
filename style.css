@@ -16,6 +16,7 @@ body {
     min-height: 100vh;
     position: relative;
     overflow-x: hidden;
+    padding: 2rem;
 }
 
 body::before {
@@ -224,6 +225,14 @@ h1 {
                  0 0 20px rgba(79, 195, 247, 0.5);
     position: relative;
     z-index: 1;
+}
+
+.btn-tema{
+    padding: 2px 4px;
+}
+
+.btn-tema:hover{
+    cursor: pointer;
 }
 
 /* FAQ Footer Styles */
